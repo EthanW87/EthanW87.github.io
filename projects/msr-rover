@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Sample Return Rover | Ethan Wu</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;">EW</a></div>
+        <ul class="nav-links">
+            <li><a href="../index.html#about">about me</a></li>
+            <li><a href="../index.html#stuff">builds/building</a></li>
+            <li><a href="../index.html#experience">experience</a></li>
+            <li><a href="../index.html#resume-cv">resume/CV</a></li>
+            <li><a href="../index.html#contact">talk to me</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-detail-container" style="max-width: 1000px; margin: 100px auto 60px; padding: 0 20px;">
+        
+        <!-- BACK BUTTON -->
+        <a href="../index.html#stuff" style="text-decoration: none; color: #888; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+            <i class="fa-solid fa-arrow-left"></i> Back to Projects
+        </a>
+
+        <!-- HEADER SECTION -->
+        <header class="project-header" style="margin-bottom: 40px;">
+            <span class="module-category" style="background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 4px; font-size: 0.85rem;">Autonomous Robotics & Space Systems</span>
+            <h1 style="font-size: 2.5rem; margin: 12px 0 8px;">Mars Sample Return Rover</h1>
+            <p class="project-subtitle" style="font-size: 1.2rem; color: #aaa;">Autonomous Navigation, Kinematic Modeling & SLAM Simulation in ROS 2</p>
+            
+            <div class="tags" style="margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap;">
+                <span class="tag">ROS 2</span>
+                <span class="tag">Nav2</span>
+                <span class="tag">Gazebo</span>
+                <span class="tag">RViz2</span>
+                <span class="tag">URDF</span>
+                <span class="tag">C++ / Python</span>
+                <span class="tag">SLAM Toolbox</span>
+            </div>
+        </header>
+
+        <!-- HERO SECTION: URDF SCREENSHOT (UNCROPPED) -->
+        <section class="project-hero-image" style="margin-bottom: 40px; background: #111; border-radius: 12px; padding: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+            <img src="../media/rover-urdf.png" alt="URDF Kinematic Model in Gazebo" style="width: 100%; border-radius: 8px; max-height: 520px; object-fit: contain; cursor: pointer;">
+            <p style="font-size: 0.85rem; color: #888; margin-top: 10px;">URDF kinematic model configured with joint limits, inertial properties, and sensor mounts rendered in simulation.</p>
+        </section>
+
+        <!-- PROJECT OVERVIEW -->
+        <section class="project-section" style="margin-bottom: 40px;">
+            <h2>System Overview</h2>
+            <p>Designed and simulated an autonomous sample return rover intended for unstructured planetary terrain. Built on ROS 2 and Gazebo, the system integrates custom URDF robot description files, differential drive kinematics, and dynamic costmap generation for obstacle avoidance during autonomous waypoint navigation.</p>
+        </section>
+
+        <!-- AUTONOMOUS LOGIC FLOWCHART -->
+        <section class="project-section" style="margin-bottom: 40px;">
+            <h2>Autonomous State Machine & Decision Logic</h2>
+            <p style="margin-bottom: 16px;">System architecture detailing state transitions between global path planning, obstacle recovery behaviors, sample localization, and docking procedures.</p>
+            
+            <div style="background: #111; padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                <img src="../media/rover-flowchart.png" alt="Mars Rover Autonomous Decision Flowchart" style="width: 100%; border-radius: 6px; max-height: 500px; object-fit: contain; cursor: pointer;">
+                <p style="font-size: 0.85rem; color: #888; margin-top: 10px;">High-level control loop and state machine architecture operating within the ROS 2 node hierarchy.</p>
+            </div>
+        </section>
+
+        <!-- RVIZ POINT CLOUD & PERCEPTION -->
+        <section class="project-section" style="margin-bottom: 40px;">
+            <h2>Perception & Spatial Mapping (RViz2)</h2>
+            <p style="margin-bottom: 16px;">Real-time environment reconstruction using simulated LiDAR point clouds and SLAM Toolbox to map unknown planetary obstacles and build Nav2 costmaps.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div style="background: #111; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                    <img src="../media/rviz-pointcloud1.png" alt="RViz 3D Point Cloud Mapping" style="width: 100%; height: 240px; border-radius: 6px; object-fit: cover; cursor: pointer;">
+                    <h4 style="margin-top: 10px;">3D Point Cloud Generation</h4>
+                    <p style="font-size: 0.85rem; color: #888;">Dense point cloud visualization captured via simulated sensor package in RViz2.</p>
+                </div>
+                <div style="background: #111; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                    <img src="../media/rviz-costmap.png" alt="Nav2 Local & Global Costmaps" style="width: 100%; height: 240px; border-radius: 6px; object-fit: cover; cursor: pointer;">
+                    <h4 style="margin-top: 10px;">Occupancy Grid & Costmaps</h4>
+                    <p style="font-size: 0.85rem; color: #888;">Inflation radius and local costmap layers used by Nav2 planner for dynamic obstacle avoidance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SYSTEM ARCHITECTURE / TECHNICAL SPECS -->
+        <section class="project-section" style="margin-bottom: 40px;">
+            <h2>Technical Highlights</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                    <h3><i class="fa-solid fa-robot"></i> URDF & Kinematics</h3>
+                    <p>Designed full URDF robot description with joint limits, inertial properties, and transmission tags for accurate physics simulation in Gazebo.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                    <h3><i class="fa-solid fa-route"></i> Nav2 Stack</h3>
+                    <p>Configured DWB local planner and Navfn global planner for precision path execution across simulated terrain gradients.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                    <h3><i class="fa-solid fa-eye"></i> Sensor Fusion</h3>
+                    <p>Integrated wheel odometry, IMU data, and point cloud perception through `robot_localization` EKF nodes for pose estimation.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content" style="text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p class="copyright">© 2026 Ethan Wu | Queen's University Mechatronics & Robotics Engineering</p>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX OVERLAY -->
+    <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Enlarged View">
+    </div>
+
+    <!-- LIGHTBOX SCRIPT -->
+    <script>
+        function openLightbox(src) {
+            const modal = document.getElementById('lightbox');
+            const modalImg = document.getElementById('lightbox-img');
+            modalImg.src = src;
+            modal.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('img:not(#lightbox-img)').forEach(img => {
+                img.addEventListener('click', () => {
+                    openLightbox(img.src);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
