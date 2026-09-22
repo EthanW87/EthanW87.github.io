@@ -1142,40 +1142,27 @@ html {
 .module-card-link p {
     text-decoration: none;
 }
-
-/* --- Fix Hero/Banner Image Cropping --- */
-/* Target only the main hero/banner image on the index.html page */
+/* --- Fix Hero / Cover Image Cropping --- */
+/* Ensures the top project cover photo and hero banners show full aspect ratio */
+.module-image img.hero-cover,
 .hero img, 
 .hero-image-container img {
   width: 100%;
   height: auto !important;
-  max-height: 80vh; /* Optional: limits height so user doesn't have to scroll */
-  object-fit: contain !important; /* Shows full banner image without cutting off top/bottom */
+  max-height: 80vh;
+  object-fit: contain !important; /* Shows full image without clipping top/bottom */
   cursor: pointer;
 }
 
 /* --- Keep Project Thumbnails Cropped --- */
-/* Revert project card images to their 'initial cropped' behavior */
-.project-card img, 
-.project-image img, 
-.gallery img {
+.module-image img {
   width: 100%;
-  height: 250px; /* Fixed height forces cropping */
-  object-fit: cover !important; /* Crops the image dynamically to fill the box, keeping it centered */
+  height: 100%;
+  object-fit: cover; /* Crops thumbnails neatly inside cards */
   cursor: pointer;
 }
 
-/* --- Shrink Video (Keeping your previous fix) --- */
-video {
-  max-width: 450px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border-radius: 8px;
-}
-
-/* --- Lightbox Modal (Keeping this intact) --- */
+/* --- Lightbox Trigger Class --- */
 .lightbox-modal {
   display: none; 
   position: fixed; 
@@ -1184,7 +1171,7 @@ video {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9); 
+  background-color: rgba(0, 0, 0, 0.95); 
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -1193,6 +1180,6 @@ video {
 .lightbox-modal img {
   max-width: 90vw;
   max-height: 90vh;
-  object-fit: contain !important; /* The lightbox MUST show the whole image */
+  object-fit: contain !important;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
 }

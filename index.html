@@ -54,7 +54,7 @@
                 <a href="projects/tripad.html" class="module-card-link">
                     <article class="module-card">
                         <div class="module-image">
-                            <img src="media/coverphoto.jpeg" alt="TriPAD Construction Sensor Prototype">
+                            <img src="media/coverphoto.jpeg" class ="hero-cover" alt="TriPAD Construction Sensor Prototype">
                             <span class="module-category">Embedded Systems</span>
                         </div>
                         <div class="module-body">
@@ -333,45 +333,37 @@
   <img id="lightbox-img" src="" alt="Enlarged View">
 </div>
 
-<script>
-  function openLightbox(src) {
-    const modal = document.getElementById('lightbox');
-    const modalImg = document.getElementById('lightbox-img');
-    modalImg.src = src;
-    modal.style.display = 'flex';
-  }
+<!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Enlarged View">
+    </div>
 
-  function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('img').forEach(img => {
-      if (img.id !== 'lightbox-img') {
-        img.addEventListener('click', (e) => {
-          e.stopPropagation();
-          openLightbox(img.src);
-        });
-      }
-    });
-  });
-</script>
-
-<!-- Click Handler Script -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('lightbox');
-    const modalImg = document.getElementById('lightbox-img');
-
-    // Attach click listener to all images (excluding lightbox preview itself)
-    document.querySelectorAll('img:not(#lightbox-img)').forEach(img => {
-      img.addEventListener('click', () => {
-        modalImg.src = img.src;
+    <script>
+      function openLightbox(src) {
+        const modal = document.getElementById('lightbox');
+        const modalImg = document.getElementById('lightbox-img');
+        modalImg.src = src;
         modal.style.display = 'flex';
-      });
-    });
-  });
-</script>
+      }
 
+      function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('img').forEach(img => {
+          if (img.id !== 'lightbox-img') {
+            img.addEventListener('click', (e) => {
+              // Prevents parent <a> links from navigating away when clicking the image
+              e.preventDefault();
+              e.stopPropagation();
+              openLightbox(img.src);
+            });
+          }
+        });
+      });
+    </script>
+</body>
+</html>
 </body>
 </html>
