@@ -1143,59 +1143,31 @@ html {
     text-decoration: none;
 }
 
-/* 1. Prevent image cropping (shows entire image without clipping top/bottom) */
-.hero-image, 
-.project-card img,
+/* --- Fix Hero/Banner Image Cropping --- */
+/* Target only the main hero/banner image on the index.html page */
+.hero img, 
+.hero-image-container img {
+  width: 100%;
+  height: auto !important;
+  max-height: 80vh; /* Optional: limits height so user doesn't have to scroll */
+  object-fit: contain !important; /* Shows full banner image without cutting off top/bottom */
+  cursor: pointer;
+}
+
+/* --- Keep Project Thumbnails Cropped --- */
+/* Revert project card images to their 'initial cropped' behavior */
+.project-card img, 
+.project-image img, 
 .gallery img {
   width: 100%;
-  height: auto;
-  max-height: 500px; /* Adjust height limit as needed */
-  object-fit: contain; /* Keeps full aspect ratio without cropping */
-  cursor: pointer; /* Indicates images are clickable */
+  height: 250px; /* Fixed height forces cropping */
+  object-fit: cover !important; /* Crops the image dynamically to fill the box, keeping it centered */
+  cursor: pointer;
 }
 
-/* 2. Shrink video size */
+/* --- Shrink Video (Keeping your previous fix) --- */
 video {
-  max-width: 60%; /* Scales down video width */
-  height: auto;
-  display: block;
-  margin: 0 auto; /* Centers the video */
-  border-radius: 8px;
-}
-
-/* 3. Lightbox Modal for Click-to-Enlarge Images */
-.lightbox-modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1000; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.85); 
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-.lightbox-modal img {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-  border-radius: 4px;
-}
-
-/* --- Fix Image Cropping & Size Constraints --- */
-img {
-  max-width: 100%;
-  height: auto !important;
-  object-fit: contain !important; /* Forces full image to display without clipping top/bottom */
-  cursor: pointer; /* Changes cursor to a hand icon indicating it can be clicked */
-}
-
-/* --- Shrink Video --- */
-video {
-  max-width: 450px; /* Constrains video width */
+  max-width: 450px;
   width: 100%;
   height: auto;
   display: block;
@@ -1203,11 +1175,11 @@ video {
   border-radius: 8px;
 }
 
-/* --- Lightbox Modal Overlay --- */
+/* --- Lightbox Modal (Keeping this intact) --- */
 .lightbox-modal {
   display: none; 
   position: fixed; 
-  z-index: 9999; /* Keeps overlay above everything else */
+  z-index: 9999; 
   top: 0;
   left: 0;
   width: 100vw;
@@ -1221,6 +1193,6 @@ video {
 .lightbox-modal img {
   max-width: 90vw;
   max-height: 90vh;
-  object-fit: contain !important;
+  object-fit: contain !important; /* The lightbox MUST show the whole image */
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
 }
