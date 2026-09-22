@@ -328,5 +328,26 @@
         </div>
     </footer>
 
+    <!-- Lightbox Container -->
+<div id="lightbox" class="lightbox-modal" onclick="this.style.display='none'">
+  <img id="lightbox-img" src="" alt="Enlarged view">
+</div>
+
+<!-- Click Handler Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('lightbox');
+    const modalImg = document.getElementById('lightbox-img');
+
+    // Attach click listener to all images (excluding lightbox preview itself)
+    document.querySelectorAll('img:not(#lightbox-img)').forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.style.display = 'flex';
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
