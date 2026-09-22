@@ -328,10 +328,34 @@
         </div>
     </footer>
 
-    <!-- Lightbox Container -->
-<div id="lightbox" class="lightbox-modal" onclick="this.style.display='none'">
-  <img id="lightbox-img" src="" alt="Enlarged view">
+    <!-- Lightbox Container & Click Script -->
+<div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Enlarged View">
 </div>
+
+<script>
+  function openLightbox(src) {
+    const modal = document.getElementById('lightbox');
+    const modalImg = document.getElementById('lightbox-img');
+    modalImg.src = src;
+    modal.style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img').forEach(img => {
+      if (img.id !== 'lightbox-img') {
+        img.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openLightbox(img.src);
+        });
+      }
+    });
+  });
+</script>
 
 <!-- Click Handler Script -->
 <script>

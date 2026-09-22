@@ -1184,3 +1184,43 @@ video {
   object-fit: contain;
   border-radius: 4px;
 }
+
+/* --- Fix Image Cropping & Size Constraints --- */
+img {
+  max-width: 100%;
+  height: auto !important;
+  object-fit: contain !important; /* Forces full image to display without clipping top/bottom */
+  cursor: pointer; /* Changes cursor to a hand icon indicating it can be clicked */
+}
+
+/* --- Shrink Video --- */
+video {
+  max-width: 450px; /* Constrains video width */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+/* --- Lightbox Modal Overlay --- */
+.lightbox-modal {
+  display: none; 
+  position: fixed; 
+  z-index: 9999; /* Keeps overlay above everything else */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9); 
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lightbox-modal img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain !important;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
