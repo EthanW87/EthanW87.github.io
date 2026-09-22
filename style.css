@@ -1155,14 +1155,14 @@ html {
 }
 
 /* --- Keep Project Thumbnails Cropped --- */
+/* --- Standard Card Thumbnails --- */
 .module-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Crops thumbnails neatly inside cards */
-  cursor: pointer;
+  object-fit: cover;
 }
 
-/* --- Lightbox Trigger Class --- */
+/* --- Lightbox Overlay Styling --- */
 .lightbox-modal {
   display: none; 
   position: fixed; 
@@ -1171,7 +1171,8 @@ html {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.95); 
+  background-color: rgba(0, 0, 0, 0.92); 
+  backdrop-filter: blur(5px);
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -1181,5 +1182,6 @@ html {
   max-width: 90vw;
   max-height: 90vh;
   object-fit: contain !important;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+  border-radius: 6px;
 }
