@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line-Following MiniBot | Ethan Wu</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;">EW</a></div>
+        <ul class="nav-links">
+            <li><a href="../index.html#about">about me</a></li>
+            <li><a href="../index.html#stuff">builds/building</a></li>
+            <li><a href="../index.html#experience">experience</a></li>
+            <li><a href="../index.html#resume-cv">resume/CV</a></li>
+            <li><a href="../index.html#contact">talk to me</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-detail-container" style="max-width: 1000px; margin: 100px auto 60px; padding: 0 20px;">
+        
+        <!-- BACK BUTTON -->
+        <a href="../index.html#stuff" style="text-decoration: none; color: #888; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+            <i class="fa-solid fa-arrow-left"></i> Back to Projects
+        </a>
+
+        <!-- HEADER SECTION -->
+        <header class="project-header" style="margin-bottom: 30px;">
+            <span class="module-category" style="background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 4px; font-size: 0.85rem;">First-Year Autonomous Robotics</span>
+            <h1 style="font-size: 2.5rem; margin: 12px 0 8px;">Autonomous Sample Pickup MiniBot</h1>
+            <p class="project-subtitle" style="font-size: 1.2rem; color: #aaa;">Line-Following, Wall-Detection & Payload Handling State Machine</p>
+            
+            <div class="tags" style="margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap;">
+                <span class="tag">Arduino (C++)</span>
+                <span class="tag">IR Reflectance Array</span>
+                <span class="tag">Ultrasonic Rangefinders</span>
+                <span class="tag">Servo Actuation</span>
+                <span class="tag">State Machine</span>
+            </div>
+        </header>
+
+        <!-- VIDEO / SHOWCASE SECTION -->
+        <section class="project-hero-image" style="margin-bottom: 40px; background: #111; border-radius: 12px; padding: 16px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+            <!-- HTML5 Local Video Player -->
+            <video controls autoplay muted loop style="width: 100%; max-height: 520px; border-radius: 8px; background: #000;">
+                <source src="../media/minibot video.mp4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p style="font-size: 0.85rem; color: #888; margin-top: 10px;">Full arena run demonstrating navigation, wall-triggered 360 spin, reverse maneuver, and scoop actuation.</p>
+        </section>
+
+        <!-- STORY / OVERVIEW -->
+        <section class="project-section" style="margin-bottom: 40px;">
+            <h2>The First-Year Odyssey</h2>
+            <p style="font-size: 1.05rem; line-height: 1.6; color: #ccc;">
+                Every robotics journey starts somewhere! As one of my earliest university engineering challenges, this project was all about getting hands-on with real-time feedback loops, sensor integration, and mechanical actuation under physical arena constraints.
+            </p>
+            <p style="font-size: 1.05rem; line-height: 1.6; color: #ccc; margin-top: 12px;">
+                The task was simple in theory, but chaotic in practice: build a mobile platform capable of navigating an unknown track, handling intersection decisions, interacting with physical arena walls, and carrying out a full payload pickup-and-delivery cycle without human intervention.
+            </p>
+        </section>
+
+        <!-- BEHAVIORAL STATE MACHINE -->
+        <section class="project-section" style="margin-bottom: 40px;">
+            <h2>The Mission Sequence</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                    <h3 style="font-size: 1.1rem; color: #4db8ff;"><i class="fa-solid fa-route"></i> 1. Line Tracking</h3>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 8px;">Reads floor reflectivity via IR sensor arrays to adjust differential motor speeds and turn tightly at track crossroad intersections.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                    <h3 style="font-size: 1.1rem; color: #4db8ff;"><i class="fa-solid fa-arrows-spin"></i> 2. Wall Detection & Spin</h3>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 8px;">Ultrasonic range sensors detect wall obstacles, triggering an immediate 360° victory spin and precise reverse alignment.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                    <h3 style="font-size: 1.1rem; color: #4db8ff;"><i class="fa-solid fa-dumpster"></i> 3. Scoop & Transport</h3>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 8px;">Actuates a motorized scoop mechanism to secure the target load, re-engaging line tracking toward the unloading zone.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                    <h3 style="font-size: 1.1rem; color: #4db8ff;"><i class="fa-solid fa-check-double"></i> 4. Drop-off Sequence</h3>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 8px;">Identifies the designated crossroad goal, reverses servo angles to deposit the payload, and completes the autonomous cycle.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SENSORS & HARDWARE -->
+        <section class="project-section" style="margin-bottom: 40px;">
+            <h2>Hardware Breakdown</h2>
+            <ul style="list-style: none; padding: 0; color: #ccc;">
+                <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fa-solid fa-microchip" style="margin-top: 4px; color: #888;"></i>
+                    <div><strong>Ground Guidance:</strong> Multi-channel IR Reflectance Sensors (measuring differential light reflection between floor surface and black tape).</div>
+                </li>
+                <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fa-solid fa-bullseye" style="margin-top: 4px; color: #888;"></i>
+                    <div><strong>Obstacle Sensing:</strong> Ultrasonic Distance Sensors for continuous proximity detection along the vehicle heading.</div>
+                </li>
+                <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px;">
+                    <i class="fa-solid fa-gears" style="margin-top: 4px; color: #888;"></i>
+                    <div><strong>Actuation:</strong> Micro servo motors for the custom 3D-printed payload scoop and high-torque DC motor drive.</div>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content" style="text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p class="copyright">© 2026 Ethan Wu | Queen's University Mechatronics & Robotics Engineering</p>
+        </div>
+    </footer>
+
+</body>
+</html>
