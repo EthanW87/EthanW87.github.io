@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Wu | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google 3D Model Viewer Script -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">EW</div>
+        <ul class="nav-links">
+            <li><a href="#about">about me</a></li>
+            <li><a href="#stuff">builds/building</a></li>
+            <li><a href="#experience">experience</a></li>
+            <li><a href="#resume-cv">resume/CV</a></li>
+            <li><a href="#contact">talk to me</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="about" class="hero">
+        <div class="hero-content">
+            <h1>Ethan Wu</h1>
+            <p class="hero-tagline">Mechatronics & Robotics Engineering Student at Queen's University</p>
+
+            <p class="hero-desc">
+                Passionate about engineering <b>functional, real-world physical prototypes</b>. Experience spans 3D kinematic design, embedded C/C++, sensor fusion, and workflow automation. Currently leading the Automation Team for the Queen's Engineering Society and building hardware solutions for national innovation challenges.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#stuff" class="btn primary-btn">Explore Work</a>
+                <a href="#contact" class="btn secondary-btn">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1: FEATURED PROJECTS -->
+        <section id="stuff" class="section">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Completed engineering systems, embedded builds, and hardware prototypes.</p>
+            </div>
+
+            <div class="module-grid">
+                <!-- Module 1: TriPAD Environmental Monitor -->
+                <a href="projects/tripad.html" class="module-card-link">
+                    <article class="module-card">
+                        <div class="module-image">
+                            <img src="media/coverphoto.jpeg" alt="TriPAD Construction Sensor Prototype">
+                            <span class="module-category">Embedded Systems</span>
+                        </div>
+                        <div class="module-body">
+                            <h3>TriPAD Construction Monitor</h3>
+                            <p class="module-subtitle">Multi-Sensor Environmental Data Logger</p>
+                            <div class="tags">
+                                <span class="tag">ESP32</span>
+                                <span class="tag">I2C / UART</span>
+                                <span class="tag">C++</span>
+                            </div>
+                            <p class="module-desc">Real-time site monitoring hardware tracking particulate density (PMS5003), noise thresholds (MAX9814), and 6-DOF structural vibration (MPU6050).</p>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Module 2: MSR Autonomous Rover -->
+                <a href="projects/msr-rover.html" class="module-card-link">
+                    <article class="module-card">
+                        <div class="module-image">
+                            <img src="media/larp image.jpeg" alt="Mars Sample Return Rover Mapping">
+                            <span class="module-category">Autonomous Navigation</span>
+                        </div>
+                        <div class="module-body">
+                            <h3>Mars Sample Return Rover</h3>
+                            <p class="module-subtitle">ROS2 Autonomous Navigation & SLAM Mapping</p>
+                            <div class="tags">
+                                <span class="tag">ROS2</span>
+                                <span class="tag">Nav2</span>
+                                <span class="tag">LiDAR</span>
+                            </div>
+                            <p class="module-desc">Autonomous planetary rover architecture featuring closed-loop PI trajectory control and LiDAR grid mapping via Nav2 stack.</p>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Module 3: Autonomous MiniBot -->
+                <a href="projects/minibot.html" class="module-card-link">
+                    <article class="module-card">
+                        <div class="module-image">
+                            <img src="media/minibot.png" alt="Line-Following Sample Pickup/Dropoff MiniBot">
+                            <span class="module-category">Robotics & Control</span>
+                        </div>
+                        <div class="module-body">
+                            <h3>Line-Following Sample MiniBot</h3>
+                            <p class="module-subtitle">Autonomous Guidance & Material Transport</p>
+                            <div class="tags">
+                                <span class="tag">Arduino</span>
+                                <span class="tag">C++</span>
+                                <span class="tag">IR Sensors</span>
+                                <span class="tag">PID Control</span>
+                            </div>
+                            <p class="module-desc">Autonomous mobile robot programmed with tuned control logic to follow high-speed optical tracks, navigate intersections, and transport payload modules.</p>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Module 4: VEX Bot -->
+                <a href="projects/vex-bot.html" class="module-card-link">
+                    <article class="module-card">
+                        <div class="module-image">
+                            <img src="media/vexthrowb.jpg" alt="VEX Robotics Competition Bot">
+                            <span class="module-category">Robotics & Control</span>
+                        </div>
+                        <div class="module-body">
+                            <h3>VEX Robotics Competition Bot</h3>
+                            <p class="module-subtitle">Autonomous Operation & Task Execution</p>
+                            <div class="tags">
+                                <span class="tag">Arduino</span>
+                                <span class="tag">C++</span>
+                                <span class="tag">IR Sensors</span>
+                                <span class="tag">PID Control</span>
+                            </div>
+                            <p class="module-desc">Autonomous mobile robot programmed with tuned control logic to follow high-speed optical tracks, navigate intersections, and transport payload modules.</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION 2: UPCOMING & IN-PROGRESS PROJECTS -->
+        <section id="upcoming" class="section section-alt">
+            <div class="section-header">
+                <h2>In-Progress & Active Builds</h2>
+                <p>Current active mechanical developments and subsystem iterations.</p>
+            </div>
+
+            <div class="module-grid">
+                <!-- Module 1: Transforming Robot -->
+                <a href="projects/transforming-robot.html" class="module-card-link">
+                    <article class="module-card">
+                        <div class="module-image">
+                            <img src="media/trans.png" alt="Autonomous Transforming Robot CAD Model">
+                            <span class="module-category">Robotics & CAD</span>
+                        </div>
+                        <div class="module-body">
+                            <h3>Autonomous Transforming Robot</h3>
+                            <p class="module-subtitle">30+ DOF Kinematic Assembly & Reconfiguration</p>
+                            <div class="tags">
+                                <span class="tag">Fusion 360</span>
+                                <span class="tag">C++</span>
+                                <span class="tag">Kinematics</span>
+                            </div>
+                            <p class="module-desc">Self-reconfiguring mechatronic system utilizing custom geared linkages, interference analysis, and dynamic center-of-gravity stabilization algorithms.</p>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Module 2: Automated Target Turret -->
+                <a href="projects/target-turret.html" class="module-card-link">
+                    <article class="module-card status-active">
+                        <div class="module-image">
+                            <div class="image-placeholder">
+                                <i class="fa-solid fa-crosshairs"></i>
+                            </div>
+                            <span class="module-status-badge">Active Build</span>
+                        </div>
+                        <div class="module-body">
+                            <h3>Automated Target Turret & Arena</h3>
+                            <p class="module-subtitle">Microcontroller Actuation & Targeting</p>
+                            <div class="tags">
+                                <span class="tag">Arduino</span>
+                                <span class="tag">Servos / DC Motors</span>
+                                <span class="tag">3D Printing</span>
+                            </div>
+                            <p class="module-desc">Automated fire-suppression target system integrated with custom target mechanics, motor control routines, and arena structures for QEC 2026.</p>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Module 3: NASA Exploration Subsystems -->
+                <a href="projects/nasa-rover.html" class="module-card-link">
+                    <article class="module-card status-planning">
+                        <div class="module-image">
+                            <div class="image-placeholder">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <span class="module-status-badge planning">Design Phase</span>
+                        </div>
+                        <div class="module-body">
+                            <h3>NASA Rover Subsystem Architecture</h3>
+                            <p class="module-subtitle">Vehicle Kinematics & Drivetrain Integration</p>
+                            <div class="tags">
+                                <span class="tag">Fusion 360</span>
+                                <span class="tag">Kinematic Modeling</span>
+                            </div>
+                            <p class="module-desc">Developing lightweight structural iterations, drivetrain mounting mechanics, and telemetry monitoring for upcoming competition cycles.</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION 3: COMPETITION EXPERIENCE -->
+        <section id="competitions" class="section">
+            <div class="section-header">
+                <h2>Competition Highlights</h2>
+                <p>National competitions, innovation challenges, and design awards.</p>
+            </div>
+
+            <div class="module-grid">
+                <!-- Comp 1: SAE Challenge -->
+                <a href="projects/sae-mobility.html" class="module-card-link">
+                    <article class="module-card competition-card">
+                        <div class="module-image">
+                            <div class="award-ribbon"><i class="fa-solid fa-trophy"></i> 2nd Place Nationwide</div>
+                            <img src="media/photogenic2.JPG" alt="SAE Mobility Challenge Presentation">
+                        </div>
+                        <div class="module-body">
+                            <h3>SAE Mobility Innovation Challenge</h3>
+                            <p class="module-subtitle">Queen's AutoDrive Team | Embedded UI Concept</p>
+                            <p class="module-desc">Pitched an adaptive learning mode integrated into AV infotainment systems to execute safe control delegation between human driver and autonomy stack.</p>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Comp 2: General's Lab -->
+                <a href="projects/generals-lab.html" class="module-card-link">
+                    <article class="module-card competition-card">
+                        <div class="module-image">
+                            <div class="award-ribbon"><i class="fa-solid fa-award"></i> 3rd Place Overall</div>
+                            <img src="media/glip award.heic" alt="General's Lab Pitch Showcase">
+                        </div>
+                        <div class="module-body">
+                            <h3>General's Lab Innovation Program</h3>
+                            <p class="module-subtitle">Hardware Venture & Product Showcase</p>
+                            <p class="module-desc">Pitched business case, hardware BOM, and technical feasibility for the TriPAD environmental monitor to a panel of construction industry leaders.</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION 4: EXPERIENCE & LEADERSHIP -->
+        <section id="experience" class="section section-alt">
+            <div class="section-header">
+                <h2>Experience & Leadership</h2>
+            </div>
+            <div class="experience-list">
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>APSC 101 Teaching Assistant</h3>
+                        <span class="exp-date">Aug. 2026 – Present</span>
+                    </div>
+                    <p class="exp-org">Queen's University Faculty of Engineering</p>
+                    <ul>
+                        <li>Instruct 40+ first-year engineering students on iterative engineering design, Fusion 360 modeling, and rapid physical prototyping.</li>
+                        <li>Facilitate hands-on studio sessions, guiding student teams through circuit integration and C++/Arduino debugging.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>Automation Team Manager</h3>
+                        <span class="exp-date">Apr. 2026 – Present</span>
+                    </div>
+                    <p class="exp-org">Queen's Engineering Society</p>
+                    <ul>
+                        <li>Lead a multidisciplinary team automating digital infrastructure, workflows, and data management across EngSoc services.</li>
+                        <li>Architect custom Power Automate flows integrated with Microsoft Lists to automate training compliance and recruitment tracking for 500+ members.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: RESUME & CV TAB -->
+        <section id="resume-cv" class="section">
+            <div class="section-header">
+                <h2>Resume & Documentation</h2>
+                <p>Access official documentation and technical summaries.</p>
+            </div>
+
+            <div class="resume-container">
+                <div class="resume-card">
+                    <i class="fa-solid fa-file-pdf resume-icon"></i>
+                    <h3>Engineering Resume</h3>
+                    <p>One-page focused summary of technical skills, project highlights, and industry experience.</p>
+                    <a href="WuEthanResumeSeptember2026.pdf" target="_blank" class="btn primary-btn">
+                        <i class="fa-solid fa-download"></i> Download Resume (PDF)
+                    </a>
+                </div>
+
+                <div class="resume-card">
+                    <i class="fa-solid fa-book-bookmark resume-icon"></i>
+                    <h3>Full Academic CV</h3>
+                    <p>Comprehensive record of coursework, competition awards, research projects, and teaching roles.</p>
+                    <a href="Ethan_Wu_CV.pdf" target="_blank" class="btn secondary-btn">
+                        <i class="fa-solid fa-file-lines"></i> View Complete CV
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / CONTACT SECTION -->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <h2>Get In Touch</h2>
+            <p>Interested in collaboration, engineering roles, or project inquiries?</p>
+            <div class="contact-links">
+                <a href="mailto:ethan.wu087@gmail.com" class="contact-item">
+                    <i class="fa-solid fa-envelope"></i> ethan.wu087@gmail.com
+                </a>
+                <a href="https://ethanw87.github.io/#about" target="_blank" class="contact-item">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com/in/ethan-wu-2b9ba3351/" target="_blank" class="contact-item">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+            <p class="copyright">© 2026 Ethan Wu | Queen's University Mechatronics & Robotics Engineering</p>
+        </div>
+    </footer>
+
+</body>
+</html>
