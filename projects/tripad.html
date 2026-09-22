@@ -45,10 +45,10 @@
             </div>
         </header>
 
-        <!-- MAIN HERO COVER (Field Deployment) -->
-        <section class="project-hero-image" style="margin-bottom: 40px;">
-            <img src="../media/coverphoto.jpeg" alt="TriPAD Deployed on Site" style="width: 100%; border-radius: 12px; max-height: 500px; object-fit: cover;">
-            <p style="font-size: 0.85rem; color: #888; text-align: center; margin-top: 8px;">TriPAD deployed on an active construction site conducting real-time vibration and air quality sampling.</p>
+        <!-- MAIN HERO COVER (UNCROPPED) -->
+        <section class="project-hero-image" style="margin-bottom: 40px; background: #111; border-radius: 12px; padding: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+            <img src="../media/coverphoto.jpeg" alt="TriPAD Deployed on Site" style="width: 100%; border-radius: 8px; max-height: 550px; object-fit: contain; cursor: pointer;">
+            <p style="font-size: 0.85rem; color: #888; margin-top: 10px;">TriPAD deployed on an active construction site conducting real-time vibration and air quality sampling.</p>
         </section>
 
         <!-- PROJECT OVERVIEW -->
@@ -57,10 +57,10 @@
             <p>TriPAD is a custom hardware monitoring unit engineered to record critical environmental safety metrics on active construction job sites. Built around an ESP32 microcontroller, the device simultaneously samples structural vibration, ambient acoustic noise levels, and airborne particulate density in real time.</p>
         </section>
 
-        <!-- SYSTEM DEMO VIDEO -->
+        <!-- SYSTEM DEMO VIDEO (RESIZED & CENTERED) -->
         <section class="project-section" style="margin-bottom: 40px;">
             <h2>System Demonstration</h2>
-            <div class="video-container" style="width: 100%; border-radius: 8px; overflow: hidden; background: #000;">
+            <div class="video-container" style="max-width: 450px; margin: 0 auto; border-radius: 8px; overflow: hidden; background: #000; border: 1px solid rgba(255,255,255,0.1);">
                 <video controls style="width: 100%; display: block;">
                     <source src="../media/tripadvid.mp4" type="video/mp4">
                     Your browser does not support video playback.
@@ -68,12 +68,12 @@
             </div>
         </section>
 
-                <!-- FIELD TESTING & INDUSTRY VALIDATION -->
+        <!-- FIELD TESTING & INDUSTRY VALIDATION -->
         <section class="project-section" style="margin-bottom: 40px;">
             <h2>Field Validation & Stakeholder Feedback</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; align-items: center; margin-top: 16px;">
                 <div>
-                    <img src="../media/testing onsite.jpeg" alt="Ethan Wu presenting TriPAD to site superintendent and mentor" style="width: 100%; border-radius: 8px; object-fit: cover;">
+                    <img src="../media/testing onsite.jpeg" alt="Ethan Wu presenting TriPAD to site superintendent and mentor" style="width: 100%; height: 260px; border-radius: 8px; object-fit: cover; cursor: pointer;">
                     <p style="font-size: 0.85rem; color: #888; margin-top: 8px;">On-site evaluation with site superintendent and engineering mentor reviewing real-time sensor output (TriPAD bottom left).</p>
                 </div>
                 <div>
@@ -128,12 +128,12 @@
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
                 <div>
-                    <img src="../media/stage1.png" alt="Stage 1 Breadboard Prototype" style="width: 100%; border-radius: 8px; height: 220px; object-fit: cover;">
+                    <img src="../media/stage1.png" alt="Stage 1 Breadboard Prototype" style="width: 100%; border-radius: 8px; height: 220px; object-fit: cover; cursor: pointer;">
                     <h4 style="margin-top: 8px;">Stage 1: Breadboard Proof-of-Concept</h4>
                     <p style="font-size: 0.9rem; color: #888;">Validating I2C/UART bus addresses and signal integrity across all three sensor modules.</p>
                 </div>
                 <div>
-                    <img src="../media/stage 2.jpeg" alt="Stage 2 Protoboard Assembly" style="width: 100%; border-radius: 8px; height: 220px; object-fit: cover;">
+                    <img src="../media/stage 2.jpeg" alt="Stage 2 Protoboard Assembly" style="width: 100%; border-radius: 8px; height: 220px; object-fit: cover; cursor: pointer;">
                     <h4 style="margin-top: 8px;">Stage 2: Protoboard Integration</h4>
                     <p style="font-size: 0.9rem; color: #888;">Soldered custom power bus distribution and compact header pins to fit the 3D-printed enclosure.</p>
                 </div>
@@ -145,12 +145,12 @@
             <h2>System Details</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
                 <div>
-                    <img src="../media/topview.jpeg" alt="OLED Top View" style="width: 100%; border-radius: 8px; height: 220px; object-fit: cover;">
+                    <img src="../media/topview.jpeg" alt="OLED Top View" style="width: 100%; border-radius: 8px; height: 220px; object-fit: cover; cursor: pointer;">
                     <h4 style="margin-top: 8px;">OLED Interface</h4>
                     <p style="font-size: 0.9rem; color: #888;">Live telemetry reporting showing current PM values and peak vibration alerts.</p>
                 </div>
                 <div>
-                    <img src="../media/tripadinside.jpeg" alt="Internal Electronics Assembly" style="width: 100%; border-radius: 8px; height: 220px; object-fit: cover;">
+                    <img src="../media/tripadinside.jpeg" alt="Internal Electronics Assembly" style="width: 100%; border-radius: 8px; height: 220px; object-fit: cover; cursor: pointer;">
                     <h4 style="margin-top: 8px;">Internal Assembly</h4>
                     <p style="font-size: 0.9rem; color: #888;">Secure internal mounting layout designed to withstand vibration testing on site.</p>
                 </div>
@@ -165,6 +165,33 @@
             <p class="copyright">© 2026 Ethan Wu | Queen's University Mechatronics & Robotics Engineering</p>
         </div>
     </footer>
+
+    <!-- LIGHTBOX OVERLAY -->
+    <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Enlarged View">
+    </div>
+
+    <!-- LIGHTBOX SCRIPT -->
+    <script>
+        function openLightbox(src) {
+            const modal = document.getElementById('lightbox');
+            const modalImg = document.getElementById('lightbox-img');
+            modalImg.src = src;
+            modal.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('img:not(#lightbox-img)').forEach(img => {
+                img.addEventListener('click', () => {
+                    openLightbox(img.src);
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
