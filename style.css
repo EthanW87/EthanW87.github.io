@@ -118,7 +118,8 @@ html {
 .hero-tagline {
     font-size: 1.25rem;
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem; /* <-- INCREASED from 1.5rem to add spacing below the blurb */
+}
 }
 
 .role-badges {
