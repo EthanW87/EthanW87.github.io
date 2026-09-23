@@ -120,7 +120,7 @@ html {
     color: var(--text-secondary);
     margin-bottom: 3rem; /* <-- INCREASED from 1.5rem to add spacing below the blurb */
 }
-}
+
 
 .role-badges {
     display: flex;
