@@ -52,7 +52,7 @@
             <p style="margin-bottom: 16px; color: #ccc;">Custom 3D-printed assembly designed in Fusion 360 to house the internal battery, motor drivers, and servo actuators. Click and drag to orbit the 3D model.</p>
             
             <model-viewer 
-                src="../media/transformer.glb" 
+                src="../media/Assembly.glb" 
                 alt="3D CAD Model of Transforming Robot" 
                 auto-rotate 
                 camera-controls 
@@ -69,6 +69,31 @@
             <p style="font-size: 1.05rem; line-height: 1.6; color: #ccc;">
                 A high-complexity mechatronics personal project aimed at designing a fully transforming robot platform heavily inspired by Optimus Prime. Modeled entirely in Fusion 360, the mechanical design integrates over 30 degrees of freedom, featuring intricate linkage systems, custom structural housings for battery management, and high-torque servo linkages for reliable vehicle-to-biped reconfiguration.
             </p>
+        </section>
+
+        <!-- SERVO MOTION TESTING VIDEO -->
+        <section class="project-section" style="margin-bottom: 40px;">
+            <h2>Servo Kinematics & Sequential Actuation</h2>
+            <p style="margin-bottom: 16px; color: #ccc;">Bench testing individual servo channels (0 to 10) sequentially to verify PWM control signal isolation, power distribution under load, and linkage range-of-motion prior to full assembly integration.</p>
+            
+            <div style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); background: #1a1a1a;">
+                <video controls autoplay loop muted playsinline style="width: 100%; max-height: 500px; display: block; object-fit: contain;">
+                    <source src="../media/servoactuation.MOV" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p style="font-size: 0.85rem; color: #888; margin-top: 8px; text-align: center;">Sequential 0–10 servo sweep sequence verifying PWM timing and physical joint limits.</p>
+        </section>
+
+        <!-- ELECTRONICS WIRING HARDWARE -->
+        <section class="project-section" style="margin-bottom: 40px;">
+            <h2>Embedded Electronics & Circuitry</h2>
+            <p style="margin-bottom: 16px; color: #ccc;">Complete wiring harness integration featuring multi-channel servo drivers, voltage regulation, power rails, and microcontroller communication layout.</p>
+            
+            <div style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); background: #1a1a1a;">
+                <img src="../media/transelectro.HEIC" alt="Fully wired electronic components and servo driver board for Transforming Robot" style="width: 100%; max-height: 500px; object-fit: cover; display: block; cursor: pointer;">
+            </div>
+            <p style="font-size: 0.85rem; color: #888; margin-top: 8px; text-align: center;">Wired electronics test bench with microcontroller, servo driver breakout, and power management setup.</p>
         </section>
 
     </main>
