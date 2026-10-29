@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automated Target Turret & Arena | Ethan Wu</title>
+    <title>BB Ball Pan-Tilt Turret & Arena | Ethan Wu</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -47,14 +47,14 @@
         <section class="project-section" style="margin-bottom: 40px;">
             <h2>System Overview</h2>
             <p style="font-size: 1.05rem; line-height: 1.6; color: #ccc;">
-                Designed and built for competition challenges (QEC 2026), this automated fire-suppression target system features custom 3D-printed turret mechanics, high-torque servo positioning, and integrated DC motor control routines. The arena setup coordinates precise aiming sequences, interactive target feedback triggers, and robust power distribution housed in a modular structural layout.
+                Designed and built to test electronics and materials feasibility for the QEC Senior Design Challenge, this BB ball target system is a speed-build (3 hours) that features custom turret mechanics, high-torque servo positioning, and integrated DC motor control routines. All physical infrastructure is constructed using basic craft materials such as cardboard, straws, popsicle sticks, etc.. The arena setup coordinates precise aiming sequences, decoupled 3D printed target pop-up systems, and robust power distribution housed in a modular structural layout.
             </p>
         </section>
 
         <!-- DEMO VIDEO SECTION -->
         <section class="project-section" style="margin-bottom: 40px;">
-            <h2>Turret Tracking & Firing Test</h2>
-            <p style="margin-bottom: 16px; color: #ccc;">Demonstrating the automated pan/tilt sweep, rapid target acquisition sequence, and firing mechanism response under live microcontroller control.</p>
+            <h2>Turret Panning/Tilting & Firing Test</h2>
+            <p style="margin-bottom: 16px; color: #ccc;">Demonstrating the pan/tilt sweep and firing mechanism response under live microcontroller control. The barrel of the turret will be improved in v2 of the build. </p>
             
             <div style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); background: #1a1a1a;">
                 <video controls autoplay loop muted playsinline style="width: 100%; max-height: 500px; display: block; object-fit: contain;">
@@ -68,7 +68,7 @@
         <!-- TURRET ASSEMBLY IMAGE -->
         <section class="project-section" style="margin-bottom: 40px;">
             <h2>Mechanical Turret Design & Assembly</h2>
-            <p style="margin-bottom: 16px; color: #ccc;">Detailed view of the dual-axis gimbal assembly, high-torque MG996R servo mounts, and 3D-printed structural components optimized for rigidity and weight reduction.</p>
+            <p style="margin-bottom: 16px; color: #ccc;">Detailed view of the assembly, high-torque MG996R servo and DC motor mounts, and structural components made of craft materials optimized for adaptability and weight reduction.</p>
             
             <div style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); background: #1a1a1a;">
                 <img src="../media/turret.jpeg" alt="Automated Target Turret Assembly" style="width: 100%; max-height: 500px; object-fit: cover; display: block; cursor: pointer;">
@@ -79,7 +79,7 @@
         <!-- WIRING & ELECTRONICS IMAGE -->
         <section class="project-section" style="margin-bottom: 40px;">
             <h2>Circuitry & Wiring Harness</h2>
-            <p style="margin-bottom: 16px; color: #ccc;">Arduino Uno integration with L298N / TB6612FNG motor drivers, signal conditioning, power buses, and clean cable routing.</p>
+            <p style="margin-bottom: 16px; color: #ccc;">Arduino Uno integration with L298N dual DC motor drivers and an IO expansion board, power distribution, and (sufficiently) clean jumper wire routing.</p>
             
             <div style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); background: #1a1a1a;">
                 <img src="../media/evilturretwiring.jpeg" alt="Turret Electronics and Wiring Layout" style="width: 100%; max-height: 500px; object-fit: cover; display: block; cursor: pointer;">
