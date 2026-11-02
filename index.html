@@ -43,33 +43,56 @@
 
     <main>
         <!-- SECTION 1: FEATURED PROJECTS -->
-        <section id="stuff" class="section">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>Completed engineering systems, embedded builds, and hardware prototypes.</p>
-            </div>
+<section id="stuff" class="section">
+    <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>Completed engineering systems, embedded builds, and hardware prototypes.</p>
+    </div>
 
-            <div class="module-grid">
-                <!-- Module 1: TriPAD Environmental Monitor -->
-                <a href="projects/tripad.html" class="module-card-link">
-                    <article class="module-card">
-                        <div class="module-image">
-                            <img src="media/coverphoto.jpeg" class ="hero-cover" alt="TriPAD Construction Sensor Prototype">
-                            <span class="module-category">Embedded Systems</span>
-                        </div>
-                        <div class="module-body">
-                            <h3>TriPAD Construction Monitor</h3>
-                            <p class="module-subtitle">Multi-Sensor Environmental Data Logger</p>
-                            <div class="tags">
-                                <span class="tag">ESP32</span>
-                                <span class="tag">I2C / UART</span>
-                                <span class="tag">C++</span>
-                            </div>
-                            <p class="module-desc">Real-time site monitoring hardware tracking particulate density (PMS5003), noise thresholds (MAX9814), and 6-DOF structural vibration (MPU6050).</p>
-                        </div>
-                    </article>
-                </a>
+    <div class="module-grid">
+        <!-- Module 1: Automated Target Turret -->
+        <a href="upcoming-projects/turret.html" class="module-card-link">
+            <article class="module-card status-active">
+                <div class="module-image">
+                    <img src="media/turret.jpeg" alt="Automated Target Turret Prototype">
+                    <span class="module-status-badge">Active Build</span>
+                </div>
+                <div class="module-body">
+                    <h3>Prototype Pan-Tilt BB Ball Turret & Arena</h3>
+                    <p class="module-subtitle">Microcontroller Actuation & Targeting</p>
+                    <div class="tags">
+                        <span class="tag">Arduino</span>
+                        <span class="tag">Servos / DC Motors</span>
+                        <span class="tag">3D Printing</span>
+                    </div>
+                    <p class="module-desc">BB ball target system integrated with user input controls, motor control routines, and arena structures for QEC 2026.</p>
+                </div>
+            </article>
+        </a>
 
+        <!-- Module 2: TriPAD Environmental Monitor -->
+        <a href="projects/tripad.html" class="module-card-link">
+            <article class="module-card">
+                <div class="module-image">
+                    <img src="media/coverphoto.jpeg" class="hero-cover" alt="TriPAD Construction Sensor Prototype">
+                    <span class="module-category">Embedded Systems</span>
+                </div>
+                <div class="module-body">
+                    <h3>TriPAD Construction Monitor</h3>
+                    <p class="module-subtitle">Multi-Sensor Environmental Data Logger</p>
+                    <div class="tags">
+                        <span class="tag">ESP32</span>
+                        <span class="tag">I2C / UART</span>
+                        <span class="tag">C++</span>
+                    </div>
+                    <p class="module-desc">Real-time site monitoring hardware tracking particulate density (PMS5003), noise thresholds (MAX9814), and 6-DOF structural vibration (MPU6050).</p>
+                </div>
+            </article>
+        </a>
+
+        <!-- Other project cards... -->
+    </div>
+</section>
                 <!-- Module 2: MSR Autonomous Rover -->
                 <a href="projects/msr-rover.html" class="module-card-link">
                     <article class="module-card">
