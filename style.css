@@ -1186,3 +1186,16 @@ html {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
   border-radius: 6px;
 }
+
+.hero-desc {
+    margin-bottom: 32px;
+    max-width: 800px;      /* optional: keeps lines a comfortable length */
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 0;
+    flex-wrap: wrap;
+}
